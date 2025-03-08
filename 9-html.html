@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test de checkAge</title>
+</head>
+<body>
+    <h1>Vérifiez votre âge</h1>
+    <label for="ageInput">Entrez votre âge :</label>
+    <input type="number" id="ageInput" />
+    <button id="checkButton">Vérifier</button>
+    <p id="result"></p>
+
+    <script type="module">
+        import checkAge from './9-js.js';
+
+        const checkButton = document.getElementById('checkButton');
+        const ageInput = document.getElementById('ageInput');
+        const resultDisplay = document.getElementById('result');
+
+        checkButton.addEventListener('click', () => {
+            const age = parseInt(ageInput.value, 10);
+            if (isNaN(age)) {
+                resultDisplay.textContent = "Veuillez entrer un nombre valide.";
+            } else {
+                const message = checkAge(age);
+                resultDisplay.textContent = message;
+            }
+        });
+    </script>
+</body>
+</html>

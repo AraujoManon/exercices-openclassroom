@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Addition</title>
+</head>
+<body>
+    <h1>Test de la Fonction d'Addition</h1>
+    <label for="num1">Nombre 1 :</label>
+    <input type="number" id="num1" placeholder="Entrez le premier nombre">
+    <br>
+    <label for="num2">Nombre 2 :</label>
+    <input type="number" id="num2" placeholder="Entrez le deuxième nombre">
+    <br>
+    <button id="addButton">Additionner</button>
+    <p id="result"></p>
+
+    <script type="module">
+        import add from './8-js.js';
+
+        const addButton = document.getElementById('addButton');
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const resultDisplay = document.getElementById('result');
+
+        addButton.addEventListener('click', () => {
+            const a = parseFloat(num1Input.value);
+            const b = parseFloat(num2Input.value);
+            
+            if (isNaN(a) || isNaN(b)) {
+                resultDisplay.textContent = "Veuillez entrer des nombres valides.";
+            } else {
+                const sum = add(a, b);
+                resultDisplay.textContent = "Le résultat est : " + sum;
+            }
+        });
+    </script>
+</body>
+</html>
