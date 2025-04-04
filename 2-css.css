@@ -15,7 +15,6 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Header animation */
 header {
   text-align: center;
   padding: 40px 20px;
@@ -27,7 +26,6 @@ header {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Image styling with hover effect */
 img {
   display: block;
   margin: 20px auto;
@@ -43,7 +41,6 @@ img:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
-/* Section styling with semi-transparent background and fade-in */
 section {
   margin: 20px auto;
   padding: 20px;

@@ -32,7 +32,6 @@ nav a:hover {
     color: #ffcc00;
 }
 
-/* Appliquer le style aux sections */
 section {
     padding: 80px 20px;
     text-align: center;
@@ -49,7 +48,6 @@ section p {
     font-size: 18px;
 }
 
-/* Ajout du défilement fluide */
 html {
     scroll-behavior: smooth;
 }
